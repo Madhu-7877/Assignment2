@@ -31,7 +31,5 @@ public class BinarySearch {
 }
 
 // Time Complexity: O(log n).
- //The number of times the array is divided is proportional to the logarithm of the array's size. 
-//Specifically, the number of iterations is log₂(n), where n is the length of the array.
 
 // Space Complexity: O(1)
