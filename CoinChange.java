@@ -24,7 +24,7 @@ public class CoinChange {
         }
 
         // If we were unable to make the amount, return -1
-        return (dp[amount] == amount + 1) ? -1 : dp[amount];
+        return (dp[amount]);
     }
 
     public static void main(String[] args) {
