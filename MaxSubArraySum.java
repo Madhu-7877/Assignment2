@@ -2,13 +2,16 @@ package practice;
 
 public class MaxSubArraySum {
     public static int maxSubArraySum(int[] arr) {
-        int maxSum = arr[0];  // Stores the maximum sum found so far
-        int currentSum = arr[0]; // Stores the current subarray sum
+        int maxSum = 0;  // Stores the maximum sum found so far
+        int currentSum = 0; // Stores the current subarray sum
 
         for (int i = 1; i < arr.length; i++) {
             // Either extend the existing subarray or start a new one
-            currentSum = Math.max(arr[i], currentSum + arr[i]);
-            
+        	currentSum = currentSum + arr[i];
+        	if(currentSum<0) {
+        		currentSum =0;
+        	}
+        	
             // Update maxSum if currentSum is greater
             maxSum = Math.max(maxSum, currentSum);
         }
